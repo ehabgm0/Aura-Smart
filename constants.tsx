@@ -4,8 +4,7 @@ import {
   Smartphone, 
   Zap, 
   Banknote, 
-  Coins, 
-  Globe 
+  Coins 
 } from 'lucide-react';
 
 export const TARGET_DAILY_PROFIT = 0.01; 
@@ -14,7 +13,12 @@ export const MAX_DAILY_PROFIT = 0.012;
 
 export const MIN_WITHDRAW_EGP = 50;
 export const MIN_DEPOSIT_EGP = 100;
-export const LOCK_IN_PERIOD_DAYS = 7; // مدة قفل رأس المال: أسبوع واحد
+export const LOCK_IN_PERIOD_DAYS = 7; 
+
+// الرسوم الجديدة للسحب
+export const WITHDRAWAL_FEE_FIXED = 50; // 50 ج.م أو 1 دولار
+export const WITHDRAWAL_LARGE_THRESHOLD = 5000;
+export const WITHDRAWAL_LARGE_FEE_PERCENT = 0.10; // نسبة متوسطة تغطي خسائر تسييل رأس المال (5% - 30%)
 
 export const PROFIT_DISTRIBUTION = [
   { label: 'أرباح المستثمر', percent: 60, color: '#fbbf24' },
@@ -43,7 +47,7 @@ export interface PaymentMethodDetail {
 export const PAYMENT_METHODS_DETAILS: Record<string, PaymentMethodDetail> = {
   VODAFONE_CASH: { 
     label: 'فودافون كاش', 
-    account: '01012345678', 
+    account: '01022679250', 
     icon: <Smartphone className="w-5 h-5" />,
     description: 'أسرع وسيلة تحويل محلي في مصر',
     depositFee: '1% (رسوم الشبكة)',
@@ -51,23 +55,23 @@ export const PAYMENT_METHODS_DETAILS: Record<string, PaymentMethodDetail> = {
   },
   INSTAPAY: { 
     label: 'انستا باي', 
-    account: 'aura.nodes@instapay', 
+    account: 'ehab5199', 
     icon: <Zap className="w-5 h-5" />,
     description: 'تحويل لحظي مباشر للبنك',
     depositFee: '0% (مجاني)',
     withdrawFee: '0% (مجاني)'
   },
-  BANK_TRANSFER: { 
-    label: 'تحويل بنكي', 
-    account: 'IBAN: EG00000000123456789', 
+  ETISALAT_CASH: { 
+    label: 'اتصالات كاش', 
+    account: '01140057253', 
     icon: <Banknote className="w-5 h-5" />,
-    description: 'للمبالغ الكبيرة والتحويلات الرسمية',
-    depositFee: 'حسب البنك',
-    withdrawFee: '5 EGP'
+    description: 'محفظة اتصالات كاش',
+    depositFee: '1%',
+    withdrawFee: '1%'
   },
   CRYPTO_USDT: { 
     label: 'USDT (TRC20)', 
-    account: 'TY1S7X9VpQzM...WkL8', 
+    account: 'Contact Support', 
     icon: <Coins className="w-5 h-5" />,
     description: 'عملات رقمية مستقرة',
     depositFee: '1 USDT',

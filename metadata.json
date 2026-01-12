@@ -1,6 +1,6 @@
 {
-  "name": "Aura Smart Nodes - مستقبل الاستثمار الرقمي",
-  "description": "منصة استثمار ذكية متخصصة في تعدين السيولة النقدية بالجنيه المصري والعملات المشفرة، مع توزيع أرباح لحظية ونظام أمان متطور.",
+  "name": "Aura Smart Nodes v4 - Biometric Core",
+  "description": "المنصة الاستثمارية الأولى المؤمنة بيومترياً والمرتبطة بسحابة Google Sheets مع تحليل ذكي للإيصالات.",
   "requestFramePermissions": [
     "camera"
   ]

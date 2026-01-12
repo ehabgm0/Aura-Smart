@@ -22,24 +22,13 @@
       .aura-shadow {
         box-shadow: 0 0 40px -10px rgba(251, 191, 36, 0.2);
       }
-      .gradient-border {
-        position: relative;
-        border-radius: 1.5rem;
-      }
-      .gradient-border::before {
-        content: "";
-        position: absolute;
-        inset: -1px;
-        border-radius: 1.6rem;
-        padding: 1px;
-        background: linear-gradient(135deg, #fbbf24, #10b981, #3b82f6);
-        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
-      }
       @keyframes spin-slow {
         from { transform: rotate(0deg); }
         to { transform: rotate(360deg); }
+      }
+      @keyframes loading {
+        0% { width: 0%; }
+        100% { width: 100%; }
       }
       .animate-spin-slow {
         animation: spin-slow 8s linear infinite;
